@@ -103,3 +103,85 @@
   text-transform: none;
   text-decoration: none;
 }
+.side-menu {
+  width: 70%;
+  background-color: white;
+  z-index: 99;
+  right: -70%;
+  top: 0;
+  position: absolute;
+  text-align: right;
+  padding-right: 35px;
+  padding-top: 150px;
+  height: 100%;
+}
+.side-menu.active {
+  -webkit-animation: linear;
+  -webkit-animation-name: run;
+  -webkit-animation-duration: 0.3s;
+  animation: linear;
+  animation-name: run;
+  animation-duration: 0.3s;
+  right: 0;
+}
+@-webkit-keyframes run {
+  0% {
+    right: -70%;
+  }
+  50% {
+    right: -35%;
+  }
+  100% {
+    right: 0;    
+  }
+}
+@keyframes run {
+  0% {
+    right: -70%;
+  }
+  50% {
+    right: -35%;
+  }
+  100% {
+    right: 0;    
+  }
+}
+.side-menu.inactive {
+  -webkit-animation: linear;
+  -webkit-animation-name: run;
+  -webkit-animation-duration: 0.3s;
+  animation: linear;
+  animation-name: run-backwards;
+  animation-duration: 0.3s;
+}
+@-webkit-keyframes run-backwards {
+  0% {
+    right: 0%;
+  }
+  50% {
+    right: -35%;
+  }
+  100% {
+    right: -70%;  
+  }
+}
+@keyframes run-backwards {
+  0% {
+    right: 0%;
+  }
+  50% {
+    right: -35%;
+  }
+  100% {
+    right: -70%;    
+  }
+}
+.side-menu .item{
+  display: block;
+  width: 100%;
+  padding-top: 15px;
+  cursor: pointer;
+}
+.home-menu1,.contact-us-menu1 {
+  cursor: pointer;
+}
